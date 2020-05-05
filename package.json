@@ -19,7 +19,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "handlebars": "^4.0.11",
-    "knex": "^0.15.2",
+    "knex": "^0.21.1",
     "mysql": "^2.16.0",
     "newsapi-wrapper": "^1.0.6",
     "promise-mysql": "^3.3.1",
