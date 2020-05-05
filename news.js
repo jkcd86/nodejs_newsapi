@@ -1,5 +1,4 @@
 const request = require("request");
-const NEWS_API_KEY = "7d322e19042a418f956c96f0218792d5";
 
 request('https://newsapi.org/v2/top-headlines?country=at&apiKey=7d322e19042a418f956c96f0218792d5', function (error, response, body) {
     
