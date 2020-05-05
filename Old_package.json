@@ -1,15 +1,14 @@
 {
-  "name": "v20",
+  "name": "nodejs_news_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "devstart": "nodemon server.js",
+    "devtest": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Manuel Valtingojer",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.0",
@@ -22,8 +21,10 @@
     "knex": "^0.15.2",
     "mysql": "^2.16.0",
     "newsapi-wrapper": "^1.0.6",
+    "nodemon": "^2.0.3",
     "promise-mysql": "^3.3.1",
     "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "yargs": "^15.3.1"
   }
 }

@@ -2,7 +2,7 @@ require('dotenv').config();
 const request = require('request');
 const yargs = require('yargs');
 
-var args = yargs
+let args = yargs
   .option("c", {
     describe: "News category of interest",
     alias: "category",
@@ -37,7 +37,7 @@ var args = yargs
   })
   .help("h").argv;
 
-var requestOptions = {
+let requestOptions = {
     url: 'https://newsapi.org/v2/top-headlines',
     qs: {
         country: args.country,
@@ -49,15 +49,15 @@ var requestOptions = {
 
 request(
     requestOptions,
-    function (error, response, body) {
+    (error, response, body) => {
     
     if (response.statusCode === 200) {
-        var bodyObj = JSON.parse(body);
+        let bodyObj = JSON.parse(body);
         console.log("Ergebnisse ingesamt: " + bodyObj.totalResults);
-    
-        for (var i = 0; i < bodyObj.articles.length; i++) {
-            console.log((i+1) + '. ' + bodyObj.articles[i].title);
-            console.log('   ' + bodyObj.articles[i].url);
-        }
+        
+        bodyObj.articles.forEach((article, index) => {
+            console.log((index +1) + '. ' + article.title);
+            console.log('    ' + article.url);
+        });
     }
 });
